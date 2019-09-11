@@ -165,6 +165,9 @@ describe("When in default mode", () => {
         .props().src
     ).toContain(src);
   });
+  it("fit parameter defaults to 'clip'", async () => {
+    expect(renderImage().find("img").props().src).toContain("fit=clip");
+  });
 });
 
 describe("Background Mode", () => {
